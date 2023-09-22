@@ -1,0 +1,330 @@
+{
+	"info": {
+		"_postman_id": "807b69ee-79a2-4045-8fc1-78a4baade2cb",
+		"name": "cat",
+		"schema": "https://schema.getpostman.com/json/collection/v2.1.0/collection.json"
+	},
+	"item": [
+		{
+			"name": "http://localhost:8000/api/v1/Catalog",
+			"request": {
+				"method": "GET",
+				"header": [],
+				"url": {
+					"raw": "http://localhost:8000/api/v1/Catalog",
+					"protocol": "http",
+					"host": [
+						"localhost"
+					],
+					"port": "8000",
+					"path": [
+						"api",
+						"v1",
+						"Catalog"
+					]
+				},
+				"description": "hhhh"
+			},
+			"response": []
+		},
+		{
+			"name": "http://localhost:8000/api/v1/Catalog/602d2149e773f2a3990b47f5",
+			"request": {
+				"method": "GET",
+				"header": [],
+				"url": {
+					"raw": "http://localhost:8000/api/v1/Catalog/602d2149e773f2a3990b47f5",
+					"protocol": "http",
+					"host": [
+						"localhost"
+					],
+					"port": "8000",
+					"path": [
+						"api",
+						"v1",
+						"Catalog",
+						"602d2149e773f2a3990b47f5"
+					]
+				},
+				"description": "gggg"
+			},
+			"response": []
+		},
+		{
+			"name": "http://localhost:8000/api/v1/Catalog/602d2149e773f2a3990b47f6",
+			"request": {
+				"method": "GET",
+				"header": [],
+				"url": {
+					"raw": "http://localhost:8000/api/v1/Catalog/602d2149e773f2a3990b47f6",
+					"protocol": "http",
+					"host": [
+						"localhost"
+					],
+					"port": "8000",
+					"path": [
+						"api",
+						"v1",
+						"Catalog",
+						"602d2149e773f2a3990b47f6"
+					]
+				},
+				"description": "ttt"
+			},
+			"response": []
+		},
+		{
+			"name": "http://localhost:8000/api/v1/Catalog/602d2149e773f2a3990b47f7",
+			"request": {
+				"method": "GET",
+				"header": [],
+				"url": {
+					"raw": "http://localhost:8000/api/v1/Catalog/602d2149e773f2a3990b47f7",
+					"protocol": "http",
+					"host": [
+						"localhost"
+					],
+					"port": "8000",
+					"path": [
+						"api",
+						"v1",
+						"Catalog",
+						"602d2149e773f2a3990b47f7"
+					]
+				},
+				"description": "hhhh"
+			},
+			"response": []
+		},
+		{
+			"name": "http://localhost:8000/api/v1/Catalog/602d2149e773f2a3990b47f8",
+			"request": {
+				"method": "GET",
+				"header": [],
+				"url": {
+					"raw": "http://localhost:8000/api/v1/Catalog/602d2149e773f2a3990b47f8",
+					"protocol": "http",
+					"host": [
+						"localhost"
+					],
+					"port": "8000",
+					"path": [
+						"api",
+						"v1",
+						"Catalog",
+						"602d2149e773f2a3990b47f8"
+					]
+				},
+				"description": "gggg"
+			},
+			"response": []
+		},
+		{
+			"name": "http://localhost:8000/api/v1/Catalog/602d2149e773f2a3990b47f9",
+			"request": {
+				"method": "GET",
+				"header": [],
+				"url": {
+					"raw": "http://localhost:8000/api/v1/Catalog/602d2149e773f2a3990b47f9",
+					"protocol": "http",
+					"host": [
+						"localhost"
+					],
+					"port": "8000",
+					"path": [
+						"api",
+						"v1",
+						"Catalog",
+						"602d2149e773f2a3990b47f9"
+					]
+				},
+				"description": "gggg"
+			},
+			"response": []
+		},
+		{
+			"name": "http://localhost:8000/api/v1/Catalog/602d2149e773f2a3990b47fa",
+			"request": {
+				"method": "GET",
+				"header": [],
+				"url": {
+					"raw": "http://localhost:8000/api/v1/Catalog/",
+					"protocol": "http",
+					"host": [
+						"localhost"
+					],
+					"port": "8000",
+					"path": [
+						"api",
+						"v1",
+						"Catalog",
+						""
+					]
+				},
+				"description": "ggg"
+			},
+			"response": []
+		},
+		{
+			"name": "http://localhost:8000/api/v1/Catalog/602d2149e773f2a3990b47f7",
+			"request": {
+				"method": "DELETE",
+				"header": [],
+				"url": {
+					"raw": "http://localhost:8000/api/v1/Catalog/602d2149e773f2a3990b47f7",
+					"protocol": "http",
+					"host": [
+						"localhost"
+					],
+					"port": "8000",
+					"path": [
+						"api",
+						"v1",
+						"Catalog",
+						"602d2149e773f2a3990b47f7"
+					]
+				},
+				"description": "gggg"
+			},
+			"response": []
+		},
+		{
+			"name": "http://localhost:8000/api/v1/Catalog/",
+			"request": {
+				"method": "GET",
+				"header": [],
+				"url": {
+					"raw": "http://localhost:8000/api/v1/Catalog/",
+					"protocol": "http",
+					"host": [
+						"localhost"
+					],
+					"port": "8000",
+					"path": [
+						"api",
+						"v1",
+						"Catalog",
+						""
+					]
+				},
+				"description": "hhh"
+			},
+			"response": []
+		},
+		{
+			"name": "http://localhost:8000/api/v1/Catalog/GetProductByCategory/White Appliances",
+			"request": {
+				"method": "GET",
+				"header": [],
+				"url": {
+					"raw": "http://localhost:8001/api/v1/Basket/LG G7 ThinQ",
+					"protocol": "http",
+					"host": [
+						"localhost"
+					],
+					"port": "8001",
+					"path": [
+						"api",
+						"v1",
+						"Basket",
+						"LG G7 ThinQ"
+					]
+				},
+				"description": "ghhh"
+			},
+			"response": []
+		},
+		{
+			"name": "http://localhost:8001/api/v1/Basket/Checkout",
+			"request": {
+				"method": "GET",
+				"header": [],
+				"url": {
+					"raw": "http://localhost:8001/api/v1/Basket/Checkout",
+					"protocol": "http",
+					"host": [
+						"localhost"
+					],
+					"port": "8001",
+					"path": [
+						"api",
+						"v1",
+						"Basket",
+						"Checkout"
+					]
+				},
+				"description": "hhhhhh"
+			},
+			"response": []
+		},
+		{
+			"name": "http://localhost:8002/api/v1/Discount/Samsung 10",
+			"request": {
+				"method": "GET",
+				"header": [],
+				"url": {
+					"raw": "http://localhost:8002/api/v1/Discount/Samsung 10",
+					"protocol": "http",
+					"host": [
+						"localhost"
+					],
+					"port": "8002",
+					"path": [
+						"api",
+						"v1",
+						"Discount",
+						"Samsung 10"
+					]
+				},
+				"description": "gggg"
+			},
+			"response": []
+		},
+		{
+			"name": "http://localhost:8002/api/v1/Discount/Samsung 10",
+			"request": {
+				"method": "DELETE",
+				"header": [],
+				"url": {
+					"raw": "http://localhost:8002/api/v1/Discount/Samsung 10",
+					"protocol": "http",
+					"host": [
+						"localhost"
+					],
+					"port": "8002",
+					"path": [
+						"api",
+						"v1",
+						"Discount",
+						"Samsung 10"
+					]
+				},
+				"description": "ggg"
+			},
+			"response": []
+		},
+		{
+			"name": "http://localhost:8004/api/v1/Order/Samsung 10",
+			"request": {
+				"method": "GET",
+				"header": [],
+				"url": {
+					"raw": "http://localhost:8004/api/v1/Order/Samsung 10",
+					"protocol": "http",
+					"host": [
+						"localhost"
+					],
+					"port": "8004",
+					"path": [
+						"api",
+						"v1",
+						"Order",
+						"Samsung 10"
+					]
+				},
+				"description": "hhhh"
+			},
+			"response": []
+		}
+	]
+}

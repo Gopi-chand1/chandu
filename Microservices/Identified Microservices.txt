@@ -1,0 +1,20 @@
+Identified Microservices-
+
+1.Catalog Services -
+
+The catalog microservice is responsible for managing the product information for the website. This includes storing and retrieving product data, managing product categories and attributes.The catalog microservice also manages the pricing information for each product.
+
+
+2.Basket Services - 
+
+The basket microservice is responsible for managing the shopping cart of each customer. It allows customers to add, remove, or update items in their cart, and it keeps track of the total price of the items in the cart.The basket microservice is responsible for the checkout process of the e-commerce website. It ensures that the customer's cart is ready for checkout, calculates the total cost of the items, and manages the payment and shipping details of the order.
+
+
+3.Discount Servics - 
+
+The discount microservice is responsible for managing discounts on the original prices and keeping their tracks in the website. This includes setting up discount rules, and applying discounts to orders during checkout.
+
+
+4.Ordering Services -
+
+The order microservice is responsible for managing the order processing and fulfillment for the website. This includes creating new orders, managing order updates, and tracking the status of each order through the fulfillment process. The order microservice can manage inventory levels for each product. This includes updating inventory levels when a customer places an order.
