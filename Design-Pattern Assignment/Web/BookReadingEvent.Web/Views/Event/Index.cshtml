@@ -1,0 +1,33 @@
+﻿@{
+    Layout = "_LayoutEvent";
+}
+@section Styles {
+  
+    <link href="~/css/Event.css" rel="stylesheet" />
+}
+<div class="container">
+    <div class="row">
+        <div class="col-6">
+            <h3 class="list-group-item list-group-item-action active" aria-current="true" style="text-align:center;"><b>Past Events </b></h3>
+            @foreach (var e in ViewBag.PastEvents)
+            {
+                <a asp-action="Index" asp-controller="GetEvent" asp-route-id="@e.EventId">
+                    <div class="list-group-item list-group-item-action list-group-item-warning">
+                        @e.Title
+                    </div>
+                </a>
+             }
+        </div>
+        <div class="col-6">
+            <h3 class="list-group-item list-group-item-action active" aria-current="true"style="text-align:center;"><b>Upcoming Events</b> </h3>
+            @foreach (var e in ViewBag.UpcomingEvents)
+            {
+                <a asp-action="Index" asp-controller="GetEvent" asp-route-id="@e.EventId" asp-route-layout="Home">
+                    <div class="list-group-item list-group-item-action list-group-item-warning">
+                        @e.Title
+                    </div>
+                </a>         
+             }
+        </div>
+    </div>
+</div>

@@ -1,0 +1,48 @@
+﻿@{
+    Layout = "_LayoutEvent";
+}
+
+@*@section Styles {
+
+    <link href="~/css/admin.css" rel="stylesheet" />
+
+}*@
+
+     @*   <h3 style="text-align:center;">My Events</h3>*@
+        <div class="container-fluid" >
+        <table class="table">
+           <thead  style="background-color: Highlight; color: white">
+                <tr>
+                    <th style="text-align:center;">
+                        <h4> My Events</h4>
+                    </th>
+
+                    <th></th>
+                </tr>
+            </thead>
+            <tbody>
+                    @foreach (var item in ViewBag.AdminEvent)
+                    {
+                        <tr>
+
+                            <td>
+                                <a asp-action="Index" asp-controller="GetEvent" asp-route-id="@item.EventId" asp-route-name="MyEvent">
+                                    @item.Title
+                                </a>
+                            </td>
+
+                            <td>
+                                @Html.ActionLink("Edit","Index","UpdateEvent", new { id = item.EventId })
+                                
+                                @*
+        @Html.ActionLink("Details", "GetEvent", new { id=item.EventId })
+        @Html.ActionLink("Delete", "DeleteEvent", new { eventId = item.EventId })*@
+
+                            </td>
+
+                        </tr>
+                    }
+             </tbody>
+          </table>
+
+        </div>

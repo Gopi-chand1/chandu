@@ -1,0 +1,41 @@
+﻿@{ Layout = "_LayoutEvent"; }
+@section Styles {
+    <link href="~/css/HomeView.css" rel="stylesheet" />
+}
+<div class="container-fluid">
+    <table class="table">
+        <thead  style="background-color:Highlight">
+            <tr>
+                <th style="text-align:center; color:white">
+                    <h4> My Events </h4>
+                </th>
+
+                <th></th>
+            </tr>
+        </thead>
+        <tbody>
+            @foreach (var item in ViewBag.MyEvents)
+            {
+                <tr>
+
+                    <td>
+                        <a asp-action="Index" asp-controller="GetEvent" asp-route-id="@item.EventId" asp-route-name="MyEvent">
+                            @item.Title
+                        </a>
+                    </td>
+
+                    <td>
+                        @Html.ActionLink("Edit", "Index", "UpdateEvent", new { id = item.EventId })
+
+                        @*
+                            @Html.ActionLink("Details", "GetEvent", new { id=item.EventId })
+                            @Html.ActionLink("Delete", "DeleteEvent", new { eventId = item.EventId })*@
+
+                    </td>
+
+                </tr>
+            }
+        </tbody>
+    </table>
+
+</div>

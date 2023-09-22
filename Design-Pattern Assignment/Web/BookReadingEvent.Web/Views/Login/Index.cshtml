@@ -1,0 +1,41 @@
+﻿@model UserLogin;
+
+@section Styles {
+    <link href="~/css/Login.css" rel="stylesheet" />
+}
+
+<div style="display: flex; justify-content: center; margin-top:24px;">
+    <div style="width: 500px; border: 2px solid ghostwhite; border-radius: 8px; padding: 24px; background-color:whitesmoke">
+        <div>
+            <h3>LogIn </h3>
+            <hr />
+        </div>
+        <form method="post" asp-action="Index" asp-controller="Login">
+            @if (ViewBag.IsSucess)
+            {
+                <div class="alert alert-danger" role="alert">
+                    EmailId or password is incorrect
+                </div>            
+            }
+
+            <div class="mb-3">
+                <label asp-for="EmailID" class="form-label validate">Email Id </label>
+                <input asp-for="EmailID" class="form-control " required>
+
+            </div>
+            <div class="mb-3">
+                <label asp-for="Password" class="form-label validate">Password </label>
+                <input asp-for="Password" class="form-control" id="exampleInputPassword1" required>
+
+            </div>
+            <input type="submit" value="Login" class="btn btn-primary" />
+
+        </form>
+        <hr />
+        <div>
+            <a asp-action="Index" asp-controller="Signup">Create new Account</a>
+        </div>
+    </div>
+</div>
+
+

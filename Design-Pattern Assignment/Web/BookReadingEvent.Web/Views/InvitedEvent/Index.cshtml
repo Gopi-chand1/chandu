@@ -1,0 +1,36 @@
+﻿@model Event;
+@{ Layout = "_LayoutEvent"; }
+
+@*@section Styles {
+    <link href="~/css/HomeView.css" rel="stylesheet" />
+}*@
+
+<div class="container">
+
+<table class="table">
+    <thead  style="background-color:Highlight; color:white">
+        <tr>
+            <th >
+                <h4 style="text-align:center">Invited Events </h4>
+            </th>
+
+            <th></th>
+        </tr>
+    </thead>
+    <tbody>
+
+        @foreach (var e in ViewBag.AllEvents)
+        {
+        <tr>
+            <td>
+                <a asp-action="Index" asp-controller="GetEvent" asp-route-id="@e.EventId" asp-route-name="IE">
+                    @e.Title
+                </a>
+            </td>
+        </tr>
+        }
+        </tbody>
+    </table>
+
+
+        </div>

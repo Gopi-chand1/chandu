@@ -1,0 +1,19 @@
+﻿.outerdiv {
+    display: flex;
+    justify-content: center;
+    margin-top: 28px;
+    margin-bottom:50px;
+}
+
+.insidediv {
+    width: 600px;
+    border: 2px solid ghostwhite;
+    border-radius: 8px;
+    padding: 24px;
+ 
+}
+
+.validate::after {
+    content: '*';
+    color: red;
+}
