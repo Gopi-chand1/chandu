@@ -1,0 +1,31 @@
+{
+  "posts": [
+    {
+      "id": 1,
+      "title": "json-server",
+      "author": "typicode"
+    }
+  ],
+  "comments": [
+    {
+      "id": 1,
+      "body": "some comment",
+      "postId": 1
+    }
+  ],
+  "profile": {
+    "name": "typicode"
+  },
+  "Students": [
+    {
+      "name": "arun",
+      "roll": 3,
+      "dob": "2001-12-06",
+      "score": 500,
+      "id": 2
+    }
+  ],
+  "Teacher": [
+    {}
+  ]
+}

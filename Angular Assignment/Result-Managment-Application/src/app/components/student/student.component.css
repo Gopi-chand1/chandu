@@ -1,0 +1,27 @@
+.loginpage{
+    height: 50vh;
+    width: 100vw;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.teachForm input{
+    width: 300px;
+}
+
+.btncolor{
+    background-color: #46A3EE;
+}
+
+.btn{
+    margin-right: 30px;
+    font-weight: bold;
+}
+
+h3{
+    font-weight: bold;
+    font-size: 20px;
+    margin-top: 20px;
+    text-align: center;
+}

@@ -1,0 +1,34 @@
+<a href="/teacher" class="btn btn-info" style="margin-top: 5px;">Back</a>
+<div style="text-align: right;">
+    <button class="btn btncolor">
+        <a routerLink="/teacher/add" style="color: white;">Add Student</a>
+    </button>
+</div>
+
+<h4>All Students</h4>
+
+<div class="tablediv">
+    <table class="table table-striped">
+        <thead>
+            <tr>
+                <th scope="col">Roll No.</th>
+                <th scope="col">Name</th>
+                <th scope="col">Date of Birth</th>
+                <th scope="col">Score</th>
+                <th scope="col">Actions</th>
+            </tr>
+        </thead>
+        <tbody>
+            <tr *ngFor="let item of collection">
+                <td>{{item.roll}}</td>
+                <td>{{item.name}}</td>
+                <td>{{item.dob}}</td>
+                <td>{{item.score}}</td>
+                <td>
+                    <a routerLink="/update/{{item.id}}" class="btn btn-primary">Edit</a>
+                    <a (click)="deleteStudent(item.id)" class="btn btn-danger">Delete</a>
+                </td>
+            </tr>
+        </tbody>
+    </table>
+</div>
