@@ -1,0 +1,34 @@
+<a href="/teacher/option" class="btn btn-info" style="margin-top:5px;">Back</a>
+<h4>Add Student-Result</h4>
+<form method="POST" class="addStu" autocomplete="off">
+    <div class="mb-3">
+      <label for="RollNo" class="form-label">Roll No. : <span class="text-danger fw-bold">*</label>
+      <input type="number" name="roll" required class="form-control" id="RollNo" onkeyup="manageBtn(this)">
+    </div>
+    <div class="mb-3">
+        <label for="Name" class="form-label">Name : <span class="text-danger fw-bold">*</label>
+        <input type="text" name="name" required class="form-control" id="Name" onkeyup="manageBtn(this)">
+      </div>
+      
+      <div class="mb-3">
+        <label for="Dateofbirth" class="form-label">Date of Birth :<span class="text-danger fw-bold">* </label>
+        <input type="date" name="dob" class="form-control" id="Dateofbirth" onkeyup="manageBtn(this)">
+      </div>
+      <div class="mb-3">
+        <label for="Score" class="form-label">Score : <span class="text-danger fw-bold">*</label>
+        <input type="number" name="score" required class="form-control" id="Score" onkeyup="manageBtn(this)">
+      </div>
+    <button type="submit"  id="btnSubmit"  class="btn btn-success" disabled>Add</button>
+    <a href="/teacher/viewall" class="btn btn-primary">View All</a>
+</form>
+<script>
+  function manageBtn(txt) {
+  var btn = document.getElementById('btnSubmit');
+  if (Name.value != '' && RollNo.value != 0 && Score.value != 0 && Dateofbirth.value != '' ) {
+  btn.disabled = false;
+  }
+  else {
+  btn.disabled = true;
+  }
+  }
+  </script>

@@ -1,0 +1,15 @@
+﻿FirstName                                          LastName                                           JobTitle
+-------------------------------------------------- -------------------------------------------------- --------------------------------------------------
+Gail                                               Erickson                                           Design Engineer
+Janice                                             Galvin                                             Tool Designer
+Jossef                                             Goldberg                                           Design Engineer
+Kevin                                              Brown                                              Marketing Assistant
+Mary                                               Dempsey                                            Marketing Assistant
+Sharon                                             Salavaria                                          Design Engineer
+Thierry                                            D'Hers                                             Tool Designer
+Wanida                                             Benshoof                                           Marketing Assistant
+
+(8 rows affected)
+
+
+Completion time: 2022-10-17T10:45:17.3796679+05:30

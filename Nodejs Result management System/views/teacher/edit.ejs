@@ -1,0 +1,34 @@
+<a href="/teacher/viewall" class="btn btn-info" style="margin-top:5px;">Back</a>
+<h4>Editing Form for Student :<%= user.name %> </h4>
+<form method="POST" class="addStu" autocomplete="off">
+    <div class="mb-3">
+      <label for="Name" class="form-label">Name : </label>
+      <input type="text" name="name" required class="form-control" value="<%= user.name  %> " id="Name" onkeyup="manageBtn(this)">
+    </div>
+    <div class="mb-3">
+        <label for="RollNo" class="form-label">Roll No. : </label>
+        <input type="number" name="roll" value="<%= user.roll  %> " required class="form-control" id="RollNo" onkeyup="manageBtn(this)">
+      </div>     
+     
+      <div class="mb-3">
+        <label for="Dateofbirth" class="form-label">Date of Birth : </label>
+        <input type="date" name="dob" value="<%= user.dob  %> " required class="form-control" id="Dateofbirth" onkeyup="manageBtn(this)">
+      </div>
+      <div class="mb-3">
+        <label for="Score" class="form-label">Score : </label>
+        <input type="number" name="score" value="<%= user.score  %> " required class="form-control" id="Score" onkeyup="manageBtn(this)">
+      </div>
+      
+    <button type="submit" id="btnSubmit" class="btn btn-success"disabled >Update</button>
+</form>
+<script>
+  function manageBtn(txt) {
+  var btn = document.getElementById('btnSubmit');
+  if (Name.value != '' && RollNo.value != 0 && Score.value != 0 && Dateofbirth.value != '' ) {
+  btn.disabled = false;
+  }
+  else {
+  btn.disabled = true;
+  }
+  }
+  </script>

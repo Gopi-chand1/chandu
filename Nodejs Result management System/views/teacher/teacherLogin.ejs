@@ -1,0 +1,35 @@
+<a href="/" class="btn btn-info" style="margin-top:5px;">Back</a>
+<h3>Teacher Login</h3>
+<div class="teachLog">
+  <form method="POST" class="teachForm">
+    <div class="mb-3">
+      <label for="Password" class="form-label">Password :</label>
+      <input type="password" name="password"  class="form-control" id="Password" onkeyup="manageBtn(this)">
+      <br>
+      <input type="checkbox" style="width: 30px;" onclick="myFunction()">Show Password
+      <br>
+    </div>
+    <a><button type="submit"id=btnSubmit class="btn btn-primary"disabled>Submit</button></a>
+  </form>
+</div>
+<script>
+  function myFunction() {
+  var x = document.getElementById("pass");
+  if (x.type === "password") {
+    x.type = "text";
+  } else {
+    x.type = "password";
+  }
+}
+</script>
+<script>
+  function manageBtn(txt) {
+  var btn = document.getElementById('btnSubmit');
+  if (Password.value != '' ){
+  btn.disabled = false;
+  }
+  else {
+  btn.disabled = true;
+  }
+  }
+  </script>

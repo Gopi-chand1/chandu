@@ -1,0 +1,41 @@
+<style>
+    .mainbox {
+         background-color: cornflowerblue;
+          margin: auto;
+           height: 600px;
+            width: 600px;
+             position: relative;
+              }
+    .err {
+                
+        color: #ffffff;
+        font-size: 11rem;
+        position:absolute;
+        left: 20%;
+        top: 8%;
+        }
+    .msg {
+        text-align: center;
+        
+        font-size: 1.6rem;
+        position:absolute;
+        left: 16%;
+        top: 45%;
+        width: 75%;
+         }
+     a {
+          text-decoration: none;
+          color: white;
+        }
+    a:hover {
+        text-decoration: underline;
+        }
+        </style>
+        <div class="mainbox">
+         <div class="err">404</div>
+         <div class="msg">Maybe this page moved? Got deleted?
+                        Never existed in the first place?
+         <p>Let's go <a (click)="GoToHome()">home</a>
+            and try from there.</p>
+    </div>
+    </div>
