@@ -1,0 +1,128 @@
+﻿@model MVCApplication.Models.EventModel
+
+@{
+    ViewData["Title"] = "GetEvent";
+@*    IEnumerable<CommentModel> comments = ViewData["Comments"] as IEnumerable<CommentModel>;*@
+}
+
+<h1>Get Event</h1>
+
+<div class="container-fluid">
+    <h4>EventModel</h4>
+    <hr />
+    <dl class="row">
+
+        @*<dt class = "col-sm-2">
+                @Html.DisplayNameFor(model => model.Id)
+            </dt>
+            <dd class = "col-sm-10">
+                @Html.DisplayFor(model => model.Id)
+            </dd>*@
+
+        <dt class="col-sm-2">
+            @Html.DisplayNameFor(model => model.Title)
+        </dt>
+        <dd class="col-sm-10">
+            @Html.DisplayFor(model => model.Title)
+        </dd>
+        <dt class="col-sm-2">
+            @Html.DisplayNameFor(model => model.Date)
+        </dt>
+        <dd class="col-sm-10">
+            @Html.DisplayFor(model => model.Date)
+        </dd>
+        <dt class="col-sm-2">
+            @Html.DisplayNameFor(model => model.Location)
+        </dt>
+        <dd class="col-sm-10">
+            @Html.DisplayFor(model => model.Location)
+        </dd>
+        <dt class="col-sm-2">
+            @Html.DisplayNameFor(model => model.StartTime)
+        </dt>
+        <dd class="col-sm-10">
+            @Html.DisplayFor(model => model.StartTime)
+        </dd>
+        <dt class="col-sm-2">
+            @Html.DisplayNameFor(model => model.Type)
+        </dt>
+        <dd class="col-sm-10">
+            @Html.DisplayFor(model => model.Type)
+        </dd>
+        <dt class="col-sm-2">
+            @Html.DisplayNameFor(model => model.Duration)
+        </dt>
+        <dd class="col-sm-10">
+            @Html.DisplayFor(model => model.Duration)
+        </dd>
+        <dt class="col-sm-2">
+            @Html.DisplayNameFor(model => model.Description)
+        </dt>
+        <dd class="col-sm-10">
+            @Html.DisplayFor(model => model.Description)
+        </dd>
+        <dt class="col-sm-2">
+            @Html.DisplayNameFor(model => model.OtherDetails)
+        </dt>
+        <dd class="col-sm-10">
+            @Html.DisplayFor(model => model.OtherDetails)
+        </dd>
+        <dt class="col-sm-2">
+            Total Invited to Event
+        </dt>
+        <dd class="col-sm-10">
+            @Html.DisplayFor(model => model.Count)
+            @*  @{
+                   Model.Count = Model.InviteByEmail.Split(',').Length;
+                   @Html.DisplayFor(model => model.Count);
+                }*@
+        </dd>
+
+    </dl>
+
+    @using (Html.BeginForm("AddComments", "Event", FormMethod.Post))
+    {
+        @Html.AntiForgeryToken()
+
+        <div class="form-horizontal">
+            @Html.HiddenFor(model => model.EventId)
+
+            @Html.ValidationSummary(true, "", new { @class = "text-danger" })
+            <div class="form-group">
+                @Html.LabelFor(model => model.CommentAdded, htmlAttributes: new { @class = "control-label col-md-2" })
+                <div class="col-md-10">
+                    @Html.EditorFor(model => model.CommentAdded, new { htmlAttributes = new { @class = "form-control" } })
+                </div>
+            </div>
+
+            <div class="form-group">
+                <div class="col-md-offset-2 col-md-10">
+                    <input type="submit" value="Post" class="btn btn-primary" />
+                </div>
+            </div>
+        </div>
+    }
+
+
+
+    <p>
+        @Html.ActionLink("PastComments", "Comments", new { id = Model.EventId })
+    </p>
+
+   @* 
+        @foreach (var item in comments)
+        {
+            <div>
+                <p>
+                    @item.CommentAdded
+                    <small>Posted On  @item.Date</small>
+                </p>
+            </div>
+    }*@
+
+</div>
+
+<div>
+    @* @Html.ActionLink("Edit", "EditEvent", new { id = Model.EventId }) |*@
+    <a asp-action="MyEvents">Back to List</a>
+</div>

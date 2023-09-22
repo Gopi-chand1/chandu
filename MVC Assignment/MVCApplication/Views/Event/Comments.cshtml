@@ -1,0 +1,13 @@
+﻿
+@model IEnumerable<CommentModel>
+@{
+                <div class="container">
+                    @foreach (var item in Model)
+                    {
+                        <div>
+                            <p > @item.CommentAdded    
+                                 <small>Posted On  @item.Date</small>
+                            </p>
+                        </div>}
+                </div>
+ }

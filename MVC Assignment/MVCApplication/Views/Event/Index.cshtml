@@ -1,0 +1,63 @@
+﻿@model IEnumerable<EventModel>
+
+@{
+    ViewData["Title"] = "Home Page";
+}
+
+<div class="text-center">
+    <h1 class="display-4">Welcome to Homepage</h1>
+
+    <hr />
+
+    <div class="container text-center">
+        <div class="row">
+            <div class="col">
+                
+                <div class="list-group">
+                    <a href="#" class="list-group-item list-group-item-action active" aria-current="true">
+                        Past Events
+                    </a>
+                    @{
+
+                        @foreach (var item in Model)
+                                    {
+                                        if (item.Date < DateTime.Now &&(item.Type == "public" ||(item.Type == "private" && item.UserId == User.Identity.Name)))
+                                        {   <div class="list-group-item list-group-item-action list-group-item-warning">
+                                    @Html.ActionLink(@item.Title, "GetEvent", "Event", new { id = @item.EventId })
+                               </div>
+                                
+                            }
+
+                        }
+                    }
+                   @* <a href="#" class="list-group-item list-group-item-action list-group-item-warning">Event1</a>*@
+
+                </div>
+            </div>
+            <div class="col">
+                <div class="list-group">
+                    <a href="#" class="list-group-item list-group-item-action active" aria-current="true">
+                        Upcoming Events
+                    </a>
+                    @{
+
+                        @foreach (var item in Model)
+                        {
+                            if (item.Date >= DateTime.Now && (item.Type == "public" || (item.Type == "private" && item.UserId == User.Identity.Name)))
+                            {
+                                <div class=" list-group-item list-group-item-action list-group-item-warning">
+                                    @Html.ActionLink(@item.Title, "GetEvent", "Event", new { id = @item.EventId })
+                                </div>
+
+                            }
+                          
+                        }
+                                    }
+                                    @*   <a href="#" class="list-group-item list-group-item-action list-group-item-warning">Event1</a>*@
+
+                            </div>
+            </div>
+        </div>
+
+    </div>
+    </div>

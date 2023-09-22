@@ -1,0 +1,62 @@
+﻿
+@using System.Collections.Generic
+@model IEnumerable<EventModel>
+@{ ViewBag.Title = "InvitedTo"; }
+
+<h2>Events Invited To</h2>
+<div class="container">
+
+    <table class="table">
+        <thead>
+            <tr>
+                <th>
+                    @Html.DisplayNameFor(model => model.Title)
+                </th>
+
+                <th></th>
+            </tr>
+        </thead>
+        <tbody>
+
+            @{ bool anyEvent = false;
+
+
+        @foreach (var item in Model)
+        {
+
+            if (item.InviteByEmail != null)
+            {
+                item.Count = item.InviteByEmail.Split(',').Length;
+                var emails = item.InviteByEmail.Split(',');
+                for (int i = 0; i < item.Count; i++)
+                {
+                    if (User.Identity.Name == emails[i])
+                    {
+                        <tr>
+                            <td>@Html.ActionLink(@item.Title, "GetEvent", "Event", new { id = @item.EventId }, null)</td>
+
+                        </tr>
+                            anyEvent = true;
+                                    break;
+                     }
+                 }
+             }
+            else
+            {
+                item.Count = 0;
+            }
+
+        }
+
+
+
+                    @if (anyEvent == false)
+                    {
+                        <tr  class="alert-danger text-center"><td> No Invitations Available ! </td></tr>} 
+        }
+        </tbody>
+        </table>
+
+        </div>
+
+
